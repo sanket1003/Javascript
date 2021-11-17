@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guitar Store</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="heading">Guitar Store</h1>
+                </div>
+                <div class="col-12 mt-3">
+                    <ul class="navi">
+                        <li id="indexpage"><a href="index.html">Home</a></li>
+                        <li id="orderpage" class="active_tab"><a href="order.html">Order Purchase</a></li>
+                        <li id="confirmationpage"><a href="confirmation.html">Confirmation</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="row mt-4">
+                <div class="col-12">
+                    <div class="row">
+                        <div class="col-6">
+                            <img src="images/product1.jpg" width="500" height="500" id="orderImage">
+                        </div>
+                        <div class="col-6">
+                            <div class="row">
+                                <div class="col-12">
+                                    <h3 class="header_desc">Product Details</h3>
+                                    <div class="desc" id="orderProductInfo">
+                                        This are one of several Squier models available that offer a pretty good
+                                        product for a reasonably low price. The pick-ups and hardware are sometimes
+                                        suspect, and the
+                                        workmanship varies from instrument to instrument, but for the price, these are a
+                                        very good beginner guitar choice.
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <h3 class="header_desc">Price</h3>
+                                    <div class="desc" id="orderPrice">
+                                        $204.99
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <h3 class="header_desc">Availability</h3>
+                                    <div class="desc">
+                                        <span style="color:green;font-weight: bold;" id="orderAvailability">In
+                                            Stock</span>
+                                        <span id="orderPiece"></span>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <h3 class="header_desc">Shipping Details</h3>
+                                    <div class="desc" id="orderShippingDetails">
+                                        charges for shipping $20
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <h3 class="header_desc">Customer Review</h3>
+                                    <div class="desc" id="orderCustomerReview">
+                                        Hmm...well, sounds like a tele at low volumes...the higher the volume, the worse
+                                        the
+                                        squeals;like a pig really...ah well, it's a cheap guitar...also tends to rattle
+                                        above
+                                        the 10th fret; on the 1st and 2nd strings (to the point of fretting out
+                                        completely); and
+                                        on the 5 and 6 stings on the 1st through 3rd frets...weird...action; settings
+                                        help, but
+                                        not much...hard to set the intonation as well (read, damn near impossible)...
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 mt-3" id="form">
+                    <hr>
+                    <h1>Purchase Form</h1>
+                    <!-- <form action="#" name="purchaseForm"> -->
+                    <div class="row no-gutters">
+
+                        <div class="col-6 mt-2">
+                            <label for="fname" class="purc_label">First Name*:</label><br>
+                            <input type="text" id="fname" name="fname" class="purc_input"
+                                placeholder="Please Enter First Name" required>
+                        </div>
+                        <div class="col-6 mt-2">
+                            <label for="lname" class="purc_label">Last Name*:</label><br>
+                            <input type="text" id="lname" name="lname" class="purc_input"
+                                placeholder="Please Enter Last Name" required>
+                        </div>
+                        <div class="col-6 mt-2">
+                            <label for="email" class="purc_label">E-mail*:</label><br>
+                            <input type="email" id="email" name="email" class="purc_input"
+                                placeholder="Please Enter E-mail" required>
+                        </div>
+                        <div class="col-6 mt-2">
+                            <label for="phnumber" class="purc_label">Phone Number*:123-123-1235</label><br>
+                            <input type="tel" id="phnumber" name="phnumber" class="purc_input"
+                                placeholder="Please Enter Phone number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+                        </div>
+                        <div class="col-6 mt-2">
+                            <label for="address" class="purc_label">Address*:</label><br>
+                            <input type="text" id="address" name="address" class="purc_input"
+                                placeholder="Please Enter Address" required>
+                        </div>
+                        <div class="col-6 mt-2">
+                            <label for="city" class="purc_label">City:</label><br>
+                            <select id="city" name="city" class="purc_input">
+                                <option value="">Select city</option>
+                                <option value="Iselin">Iselin</option>
+                                <option value="Edison">Edison</option>
+                                <option value="Jersey City">Jersey City</option>
+                            </select>
+                        </div>
+                        <div class="col-6 mt-2">
+                            <label for="state" class="purc_label">State:</label><br>
+                            <select id="state" name="state" class="purc_input">
+                                <option value="">Select state</option>
+                                <option value="New Jersey">New Jersey</option>
+                                <option value="New York">New York</option>
+                                <option value="North Carolina">North Carolina</option>
+                            </select>
+                        </div>
+                        <div class="col-6 mt-2">
+                            <label for="zip" class="purc_label">Zip Code*:</label><br>
+                            <input type="number" id="zip" name="zipcode" class="purc_input"
+                                placeholder="Please Enter Zip Code" required>
+                        </div>
+                        <h4 class="mt-2 mb-0">Credit Card Details</h4>
+                        <div class="col-4 mt-2">
+                            <label for="cc" class="purc_label">Card Number*:</label><br>
+                            <input type="number" id="cc" name="cardnumber" class="purc_input"
+                                placeholder="Please Enter Card Number" maxlength="16" required>
+                        </div>
+                        <div class="col-4 mt-2">
+                            <label for="expdate" class="purc_label">Exp. Date*:</label><br>
+                            <input type="date" id="expdate" name="expdate" class="purc_input"
+                                placeholder="Please Select Date" required>
+                        </div>
+                        <div class="col-4 mt-2">
+                            <label for="cvv" class="purc_label">CVV*:</label><br>
+                            <input type="password" id="cvv" name="cvv" class="purc_input" placeholder="Please Enter CVV"
+                                maxlength="3" required>
+                        </div>
+                        <div class="col-12 mt-4" style="float:right">
+                            <input type="submit" class="buy_button" value="Go To Review" id="review">
+                        </div>
+                    </div>
+                    <!-- </form> -->
+
+                </div>
+
+                <div class="col-12 mt-3" id="preview" style="display: none;">
+                    <hr>
+                    <div class="row no-gutters">
+                        <h1>Preview Order Info</h1>
+                        <div class="col-12" style="margin:10px 0px 10px 20px">
+                            <p class="info_preview">First Name: <span id="previewfname"
+                                    style="font-weight: lighter;color:black"></span></p>
+                            <p class="info_preview">Last Name: <span id="previewlname"
+                                    style="font-weight: lighter;color:black"></span></p>
+                            <p class="info_preview">Email: <span id="previewemail"
+                                    style="font-weight: lighter;color:black"></span></p>
+                            <p class="info_preview">Phone No: <span id="previewphone"
+                                    style="font-weight: lighter;color:black"></span></p>
+                            <p class="info_preview">Address: <span id="previewaddress"
+                                    style="font-weight: lighter;color:black"></span></p>
+                            <p class="info_preview">Card Number: <span id="previewcard"
+                                    style="font-weight: lighter;color:black"></span></p>
+                            <p class="info_preview">Exp Date: <span id="previewdate"
+                                    style="font-weight: lighter;color:black"></span></p>
+                            <p class="info_preview">CVV: <span id="previewcvv"
+                                    style="font-weight: lighter;color:black"></span></p>
+                        </div>
+                        <div class="col-6" style="margin:10px 0px 10px 20px">
+                            <button type="button" class="edit_button" id="editbutton">Edit</button>
+                            <button type="button" class="buy_guitar_button" id="buyGuitar">Buy Guitar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+
+        <footer>
+            <hr>
+            <div class="container-fluid p-2 centered_content">
+                Copyright(C) 2021 Guitar store | All Right Reserved
+            </div>
+        </footer>
+    </div>
+
+
+
+    <script src="js/order.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
